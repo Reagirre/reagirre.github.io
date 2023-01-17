@@ -1,68 +1,23 @@
 <!doctype html>
 <html>
 	<head>
-		<title>Markak</title>
-		<style>
-			* {margin: 0; padding: 0}
-			body{
-				margin:auto;
-				padding: 0px;
-			}
-			header{
-				display: flex;
-				place-content: normal center; 
-				width:auto;
-				border-top: rgb(0, 0, 0) 1px solid;
-				border-left: rgb(0, 0, 0) 1px solid;
-				border-right: rgb(0, 0, 0) 1px solid;
-				background-color: rgb(80, 99, 153);
-			}
-			nav{
-				padding: 15px;
-				border-bottom: rgb(0, 0, 0) 1px solid;
-				border-left: rgb(0, 0, 0) 1px solid;
-				border-right: rgb(0, 0, 0) 1px solid;
-				background-color: rgb(80, 99, 153);
-			}
-			main{
-				padding: 10px;
-				
-			}
-			footer{
-				padding: 10px;
-				background-color: rgb(134, 151, 188);
-			}
-			body nav a{
-				margin:5px;
-				padding-right: 10px;
-				border-right: rgb(0, 0, 0) 2px solid;
-			}
-			#container {
-				display: grid;
-				grid: repeat(4, 170px) / auto-flow 15%;
-			}
 
-			#container > div {
-				display: flex;
-				flex-wrap: wrap;
-				place-content: space-around center;
-			}
-			img{
-				width: 70%;
-			}
-		</style>
+		<title>Jony's Cars</title>
+		<link rel="stylesheet" href="style.css">
 	</head>
 	<body>
 		<header>
-			<h1>Markak</h1>
+			
 		</header>
 		<nav>
-			<p><a href="index.html">Hasiera</a>
-				<a href="katalogoa.html">Katalogoa</a>
-				<a href="gehiago.html">Gehiago</a>
-				<a href="zerbitzuak.html">Zerbitzuak</a>
-				<a href="laguntza.html">Laguntza</a>
-			</p>
+			<img src="img/icono-coche1.png" alt="logoa">
+			<h1>Jony's Cars</h1>
+			<button class="cta" onclick="window.location.href='index.html'">
+				<span class="hover-underline-animation"> Shop now </span>
+				<svg viewBox="0 0 46 16" height="10" width="30" xmlns="http://www.w3.org/2000/svg" id="arrow-horizontal">
+					<path transform="translate(30)" d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z" data-name="Path 10" id="Path_10"></path>
+				</svg>
+			</button>
 		</nav>
 		<main>
 			<div id="container">
