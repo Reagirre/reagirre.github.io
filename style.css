@@ -7,13 +7,25 @@ header{
 h1{
     font-size: 2em;
     font-family: sans-serif;
+    color: white;
+}
+h2{
+    font-size: 2em;
+    font-family: sans-serif;
+    color: rgba(11, 163, 6);
+}
+h3{
+    font-size: 2em;
+    font-family: sans-serif;
+    color: rgb(37, 50, 147);
 }
 nav{
     padding: 0.5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 0.5px double rgb(0, 0, 0);
+    background-color: rgb(0, 0, 0);
+    /* border-bottom: 0.5px double rgb(0, 0, 0); */
 }
 nav  img{
     width: 7em;
@@ -23,21 +35,26 @@ ul {
     margin: 0;
     padding: 0;
     width: 200px;
-    background-color: #f1f1f1;
+    background-color: black;
   }
   
-  li a {
+li a {
     display: block;
-    color: rgb(135, 135, 135);
+    color: rgb(173, 173, 173);
     padding: 8px 16px;
     text-decoration: none;
+    size-adjust: auto;
+    cursor: pointer;
   }
   
   /* Change the link color on hover */
   li a:hover {
-    background-color: rgb(216, 216, 216);
-    color: rgb(250, 50, 93);
+    background-color: rgb(134, 134, 134);
+    color: rgb(56, 56, 56);
+    font-weight: bold;
+    font-style: italic;
   }
+
 #container1{
     
     padding-left: 2em;
@@ -45,8 +62,8 @@ ul {
 }
 #container {
     display: grid;
-
     grid: repeat(4, 170px) / auto-flow 15%;
+    place-content: center;
 }
 #container img{
     width: 7em;
@@ -84,13 +101,490 @@ ul {
     border-radius: 5px;
     transition: all ease 0.1s;
     box-shadow: 0px 5px 0px 0px #979797;
+    cursor: pointer;
 
   }
-  
 .botoia button:active {
     transform: translateY(5px);
     box-shadow: 0px 0px 0px 0px #a29bfe;
   }
+
+/* --------------------KOTXEA 1 en orrialdeko aldaketak-------------------- */
+
+
+main #hyundai{
+    display: grid;
+    grid-template: auto auto / 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    row-gap: 15px;
+    column-gap: 15px;
+    background-image: linear-gradient(120deg, rgba(155, 195, 243, 0.5), rgba(192, 215, 243, 0.3),  rgba(243, 224, 192, 0.3));
+}
+#hyundai img{
+    width: 75%;
+}
+#testua_barrua{
+    grid-row: 1/2;
+    grid-column: 1/span 2;
+
+    font-size: 2em;
+    font-family: Garamond;
+    color: rgb(58, 58, 58);
+    margin-top: 1em;
+    margin-left: 1em;
+}
+#interior1{
+    grid-row: 1/2;
+    grid-column: 4/span 5;
+    margin-top: 3em;
+    margin-left: 1em;
+}
+#interior2{
+    grid-row: 1/2;
+    grid-column: 9/span 5;
+    margin-top: 3em;
+    margin-left: 1em;
+}
+
+#testua_kanpoa{
+    grid-row: 2/3;
+    grid-column: 1/span 2;
+
+    font-size: 2em;
+    font-family: Garamond;
+    color: rgb(58, 58, 58);
+    margin-top: 1em;
+    margin-left: 1em;
+}
+#exterior1{
+    grid-row: 2/3;
+    grid-column: 4/span 5;
+    margin-top: 3em;
+    margin-left: 1em;
+}
+#exterior2{
+    grid-row: 2/3;
+    grid-column: 9/span 5;
+    margin-top: 3em;
+    margin-left: 1em;
+}
+#interior1 img{
+    border: 0.5px double rgba(173, 173, 173, 0.416);
+    transition: transform .2s;
+    cursor: zoom-in;
+
+}
+#interior1 img:hover{
+    transform: scale(1.5);
+}
+#interior2 img{
+    border: 0.5px double rgba(173, 173, 173, 0.416);
+    transition: transform .2s;
+    cursor: zoom-in;
+}
+#interior2 img:hover{
+    transform: scale(1.5);
+}
+#exterior1 img{
+    border: 0.5px double rgba(173, 173, 173, 0.416);
+    transition: transform .2s;
+    cursor: zoom-in;
+}
+#exterior1 img:hover{
+    transform: scale(1.35);
+}
+#exterior2 img{
+    border: 0.5px double rgba(173, 173, 173, 0.416);
+    transition: transform .2s;
+    cursor: zoom-in;
+}
+#exterior2 img:hover{
+    transform: scale(1.35);
+}
+#aukeratu{
+    grid-row: 3/4;
+    grid-column: 4/span 8;
+    margin-top: 6em;
+    margin-bottom: 2em;
+}
+/* #aukeratu button{
+    width: 100%;
+    height: 4em;
+    margin-top: 75px;
+    margin-bottom: 2em;
+} */
+#aukeratu button {
+    
+    width: 100%;
+    background: rgba(0, 0, 0, 0.924);
+    color: white;
+    border: none;
+    border-radius: 0.625em;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+#aukeratu button:hover {
+    color: rgb(44, 44, 44);
+   }
+   
+#aukeratu button:after {
+    content: "";
+    background: rgb(255, 255, 255);
+    position: absolute;
+    z-index: -1;
+    left: -20%;
+    right: -20%;
+    top: 0;
+    bottom: 0;
+    transform: skewX(-45deg) scale(0, 1);
+    transition: all 0.7s;
+   }
+   
+#aukeratu button:hover:after {
+    transform: skewX(-45deg) scale(1, 1);
+    -webkit-transition: all 0.7s;
+    transition: all 0.7s;
+   }
+
+
+/* --------------------KOTXEA 2 en orrialdeko aldaketak-------------------- */
+
+
+main #skoda{
+    display: grid;
+    grid-template: auto auto / 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    row-gap: 15px;
+    column-gap: 15px;
+    background-image: linear-gradient(120deg, rgba(0, 0, 0, 0.931), rgba(36, 36, 36, 0.95),  rgba(162, 162, 162, 0.907));
+}
+#skoda img{
+    width: 75%;
+}
+#testua_barrua2{
+    grid-row: 1/2;
+    grid-column: 1/span 2;
+
+    font-size: 2em;
+    font-family: Garamond;
+    color: rgb(184, 184, 184, 0.8);
+    margin-top: 1em;
+    margin-left: 1em;
+}
+#testua_kanpoa2{
+    grid-row: 2/3;
+    grid-column: 1/span 2;
+
+    font-size: 2em;
+    font-family: Garamond;
+    color: rgb(184, 184, 184, 0.8);
+    margin-top: 1em;
+    margin-left: 1em;
+}
+#atzera{
+    grid-row: 4/5;
+    grid-column: 1/span 2;
+    margin-bottom: 15px;
+    margin-left: 15px;
+}
+#atzera_bot{
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    cursor: pointer;
+    background-color: #2261f2;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 100;
+    border: #004dff;
+    transition: 0.5s;
+}
+#atzera_bot:active {
+    background-color: #020cd1;
+}
+#atzera_bot:hover {
+    transform: scale(1.1);
+}
+#atzera_bot .arrow-left {
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    margin-bottom: auto;
+    margin-top: auto;
+    margin-left: 35%;
+    margin-right: 60%;
+    border-right: 15px solid white;
+}
+
+
+/* --------------------Saskia ren orrialdeko aldaketak-------------------- */
+
+main #saskia{
+    display: grid;
+    grid-template: 4em 4em / 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    row-gap: 15px;
+    column-gap: 15px;
+    border: 1px double black;
+    margin: 1em;
+    border-radius: 1em;
+    background-color: rgba(192, 192, 192, 0.226);
+    
+}
+main #saskia #produ{
+    grid-row: 1/2;
+    grid-column: 1/span 1;
+    align-self: center;
+    font-size: 2em;
+    font-family: Garamond;
+    /* border: 1px double black; */
+}
+main #saskia #salneurria{
+    grid-row: 1/2;
+    grid-column: 3/span 1;
+    font-size: 2em;
+    font-family: Garamond;
+    /* border: 1px double black; */
+    /* border-right: 1px solid black; */
+}
+main #saskia #promozioak{
+    grid-row: 1/2;
+    grid-column: 5/span 1;
+    font-size: 2em;
+    font-family: Garamond;
+    /* border: 1px double black; */
+}
+main #saskia #iva{
+    grid-row: 1/2;
+    grid-column: 7/span 1;
+    font-size: 2em;
+    font-family: Garamond;
+    /* border: 1px double black; */
+}
+main #saskia #guztira{
+    grid-row: 1/2;
+    grid-column: 9/span 1;
+    font-size: 2em;
+    font-family: Garamond;
+    /* border: 1px double black; */
+}
+main #saskia #produ1_iz{
+    grid-row: 2/3;
+    place-self: center;
+    font-variant: small-caps;
+    font-style: italic;
+    font-size: medium;
+    /* border: 1px double black; */
+}
+main #saskia #produ1_sal{
+    grid-row: 2/3;
+    grid-column: 3/span 1;
+    align-self: center;
+    font-variant: small-caps;
+    font-style: italic;
+    font-size: medium;
+    /* border: 1px double black; */
+}
+main #saskia #produ1_pro{
+    grid-row: 2/3;
+    grid-column: 5/span 1;
+    align-self: center;
+    justify-self: self-start;
+    font-variant: small-caps;
+    font-style: italic;
+    font-size: medium;
+    /* border: 1px double black; */
+}
+main #saskia #produ1_iva{
+    grid-row: 2/3;
+    grid-column: 7/span 1;
+    align-self: center;
+    justify-self: self-start;
+    font-variant: small-caps;
+    font-style: italic;
+    font-size: medium;
+    /* border: 1px double black; */
+}
+main #saskia #produ1_guztira{
+    grid-row: 2/3;
+    grid-column: 9/span 1;
+    align-self: center;
+    justify-self: self-end;
+    font-variant: small-caps;
+    font-style: italic;
+    font-size: medium;
+    /* border: 1px double black; */
+}
+main #saskia #produ1_bot{
+    grid-row: 3/4;
+    grid-column: 12/span 1;
+    align-self: center;
+    justify-self: self-end;
+    color: rgb(255, 255, 255);
+}
+main #saskia #produ1_bot button {
+    cursor: pointer;
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+    font-family: Helvetica,"sans-serif";
+    transition: all .2s;
+    padding: 10px 20px;
+    border-radius: 100px;
+    background: #163d4a;
+    border: 1px solid rgb(255,255,255) transparent;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+}
+main #saskia #produ1_bot button:hover {
+    background: #1b4c5c;
+}
+main #saskia #produ1_bot button > svg {
+    width: 34px;
+    margin-left: 10px;
+    transition: transform .3s ease-in-out;
+}
+main #saskia #produ1_bot button:hover svg {
+    transform: translateX(5px);
+} 
+main #saskia #produ1_bot button:active {
+    transform: scale(0.95);
+}
+
+
+/* --------------------Saskia ren orrialdeko aldaketak-------------------- */
+
+main #eskaria{
+    display: grid;
+    grid-template: auto auto / 1fr 1fr 1fr 1fr 1fr 1fr;
+    row-gap: 0.5em;
+    margin: 3em;
+    padding: 1em;
+    border-radius: 0.5em;
+}
+main #eskaria #titulo1{
+    grid-row: 1/2;
+    grid-column: 1 /span 2;
+    font-size: 2em;
+    padding-left: 0.2em;
+    padding-top: 0.2em;
+    justify-self: self-start;
+    
+}
+main #eskaria #tit_izena{
+    grid-row: 2/3;
+    grid-column: 1 /span 1;
+    font-size: 1.2em;
+    justify-self: center;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+    border-bottom: 1px solid black;
+}
+main #eskaria #tit_abizena{
+    grid-row: 3/4;
+    grid-column: 1 /span 1;
+    font-size: 1.2em;
+    justify-self: center;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+    border-bottom: 1px solid black;
+}
+main #eskaria #tit_helbidea{
+    grid-row: 4/5;
+    grid-column: 1 /span 1;
+    font-size: 1.2em;
+    justify-self: center;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+    border-bottom: 1px solid black;
+}
+main #eskaria #tit_herria{
+    grid-row: 5/6;
+    grid-column: 1 /span 1;
+    font-size: 1.2em;
+    justify-self: center;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+    border-bottom: 1px solid black;
+}
+main #eskaria #tit_pk{
+    grid-row: 6/7;
+    grid-column: 1 /span 1;
+    font-size: 1.2em;
+    justify-self: center;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+    border-bottom: 1px solid black;
+}
+main #eskaria #tit_mail{
+    grid-row: 7/8;
+    grid-column: 1 /span 1;
+    font-size: 1.2em;
+    justify-self: center;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+    border-bottom: 1px solid black;
+}
+#eran_iz{
+    grid-row: 2/3;
+    grid-column: 2 /span 2;
+    align-self: center;
+    justify-self: self-start;
+}
+input:invalid + span::after{
+    content: "✖";
+}
+input:valid + span::after{
+    content: "✓";
+}
+#eran_abi{
+    grid-row: 3/4;
+    grid-column: 2 /span 2;
+    align-self: center;
+    justify-self: self-start;
+}
+#eran_hel{
+    grid-row: 4/5;
+    grid-column: 2 /span 2;
+    align-self: center;
+    justify-self: self-start;
+}
+#eran_her{
+    grid-row: 5/6;
+    grid-column: 2 /span 2;
+    align-self: center;
+    justify-self: self-start;
+}
+#eran_pk{
+    grid-row: 6/7;
+    grid-column: 2 /span 2;
+    align-self: center;
+    justify-self: self-start;
+}
+#eran_mail{
+    grid-row: 7/8;
+    grid-column: 2 /span 2;
+    align-self: center;
+    justify-self: self-start;
+}
+#kutxa{
+    grid-row: 1/9;
+    grid-column: 1 /span 3;
+    border: 1px solid black;
+    border-radius: 0.5em;
+    z-index: -1;
+}
+#hurrengoa_esk1{
+    grid-row: 9/10;
+    grid-column: 4 /span 1;
+    justify-self: center;
+}
 footer{
     margin: 2em;
 }
