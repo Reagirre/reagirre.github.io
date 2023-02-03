@@ -1,59 +1,65 @@
 * {margin: 0; padding: 0}
-
 header{
-    background-color: rgb(49, 49, 49);
-    padding: 1%;
-}
-h1{
-    font-size: 2em;
-    font-family: sans-serif;
+    background: rgb(0, 0, 0);
+    grid-area: header;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 1.5em;
     color: white;
 }
+header img{
+    width: 3em;
+}
+h1{
+    grid-row: 1/2;
+    grid-column: 4/span 6;
+    font-size: 3vw;
+    font-family: sans-serif;
+    color: white;
+    place-self: center;
+}
 h2{
-    font-size: 2em;
+    grid-row: 1/2;
+    grid-column: 4/span 6;
+    font-size: 3vw;
     font-family: sans-serif;
     color: rgba(11, 163, 6);
+    place-self: center;
 }
 h3{
-    font-size: 2em;
+    grid-row: 1/2;
+    grid-column: 4/span 6;
+    font-size: 3vw;
     font-family: sans-serif;
     color: rgb(37, 50, 147);
+    place-self: center;
 }
 nav{
-    padding: 0.5%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgb(0, 0, 0);
+    display: grid;
+    grid-template: auto auto/ 1fr 1fr 1fr 1fr 1fr;
+    background-color: rgb(162, 162, 162);
     /* border-bottom: 0.5px double rgb(0, 0, 0); */
 }
-nav  img{
-    width: 7em;
+ul{
+    grid-row: 1/2;
+    grid-column: 1/span 5;
+    align-self: center;
+    width: 100%;
 }
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    width: 200px;
-    background-color: black;
-  }
-  
-li a {
-    display: block;
-    color: rgb(173, 173, 173);
-    padding: 8px 16px;
+ul a{
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    color: black;
     text-decoration: none;
-    size-adjust: auto;
     cursor: pointer;
-  }
+    font-size: 1.2em;
+}
   
   /* Change the link color on hover */
-  li a:hover {
+nav ul a:hover{
     background-color: rgb(134, 134, 134);
-    color: rgb(56, 56, 56);
-    font-weight: bold;
-    font-style: italic;
-  }
+}
 
 #container1{
     
@@ -62,11 +68,11 @@ li a {
 }
 #container {
     display: grid;
-    grid: repeat(4, 170px) / auto-flow 15%;
+    grid: repeat(4, 10em) / auto-flow 15%;
     place-content: center;
 }
 #container img{
-    width: 7em;
+    width: 100%;
 }
 #container div {
     display: flex;
@@ -84,6 +90,7 @@ li a {
 }
 .im1  img{
     border-radius: 2em;
+    width: 100%;
 }
 .paragrafo{
     font-size: 1.25em;
@@ -126,11 +133,11 @@ main #hyundai{
     grid-row: 1/2;
     grid-column: 1/span 2;
 
-    font-size: 2em;
+    font-size: 1em;
     font-family: Garamond;
     color: rgb(58, 58, 58);
-    margin-top: 1em;
-    margin-left: 1em;
+    margin-top: 0.3em;
+    margin-left: 0.3em;
 }
 #interior1{
     grid-row: 1/2;
@@ -149,11 +156,9 @@ main #hyundai{
     grid-row: 2/3;
     grid-column: 1/span 2;
 
-    font-size: 2em;
+    font-size: 1em;
     font-family: Garamond;
     color: rgb(58, 58, 58);
-    margin-top: 1em;
-    margin-left: 1em;
 }
 #exterior1{
     grid-row: 2/3;
@@ -219,7 +224,7 @@ main #hyundai{
     color: white;
     border: none;
     border-radius: 0.625em;
-    font-size: 20px;
+    font-size: 1em;
     font-weight: bold;
     cursor: pointer;
     position: relative;
@@ -335,7 +340,6 @@ main #saskia{
     margin: 1em;
     border-radius: 1em;
     background-color: rgba(192, 192, 192, 0.226);
-    
 }
 main #saskia #produ{
     grid-row: 1/2;
@@ -464,7 +468,8 @@ main #eskaria{
     display: grid;
     grid-template: auto auto / 1fr 1fr 1fr 1fr 1fr 1fr;
     row-gap: 0.5em;
-    margin: 3em;
+    margin-left: 3em;
+    margin-top: 1.5em;
     padding: 1em;
     border-radius: 0.5em;
 }
@@ -477,113 +482,254 @@ main #eskaria #titulo1{
     justify-self: self-start;
     
 }
-main #eskaria #tit_izena{
-    grid-row: 2/3;
-    grid-column: 1 /span 1;
-    font-size: 1.2em;
-    justify-self: center;
-    padding-top: 0.3em;
-    padding-bottom: 0.3em;
-    border-bottom: 1px solid black;
-}
-main #eskaria #tit_abizena{
-    grid-row: 3/4;
-    grid-column: 1 /span 1;
-    font-size: 1.2em;
-    justify-self: center;
-    padding-top: 0.3em;
-    padding-bottom: 0.3em;
-    border-bottom: 1px solid black;
-}
-main #eskaria #tit_helbidea{
-    grid-row: 4/5;
-    grid-column: 1 /span 1;
-    font-size: 1.2em;
-    justify-self: center;
-    padding-top: 0.3em;
-    padding-bottom: 0.3em;
-    border-bottom: 1px solid black;
-}
-main #eskaria #tit_herria{
-    grid-row: 5/6;
-    grid-column: 1 /span 1;
-    font-size: 1.2em;
-    justify-self: center;
-    padding-top: 0.3em;
-    padding-bottom: 0.3em;
-    border-bottom: 1px solid black;
-}
-main #eskaria #tit_pk{
-    grid-row: 6/7;
-    grid-column: 1 /span 1;
-    font-size: 1.2em;
-    justify-self: center;
-    padding-top: 0.3em;
-    padding-bottom: 0.3em;
-    border-bottom: 1px solid black;
-}
-main #eskaria #tit_mail{
-    grid-row: 7/8;
-    grid-column: 1 /span 1;
-    font-size: 1.2em;
-    justify-self: center;
-    padding-top: 0.3em;
-    padding-bottom: 0.3em;
-    border-bottom: 1px solid black;
-}
-#eran_iz{
-    grid-row: 2/3;
-    grid-column: 2 /span 2;
-    align-self: center;
-    justify-self: self-start;
-}
 input:invalid + span::after{
-    content: "✖";
+    content: "";
 }
 input:valid + span::after{
     content: "✓";
 }
-#eran_abi{
-    grid-row: 3/4;
-    grid-column: 2 /span 2;
-    align-self: center;
-    justify-self: self-start;
+
+#eskaria .element{
+    display: flex;
+    flex-direction: row;
+    margin-top: 0.3em;
 }
-#eran_hel{
-    grid-row: 4/5;
-    grid-column: 2 /span 2;
-    align-self: center;
-    justify-self: self-start;
+#eskaria .element label{
+    width: 6em;
 }
-#eran_her{
-    grid-row: 5/6;
-    grid-column: 2 /span 2;
-    align-self: center;
-    justify-self: self-start;
-}
-#eran_pk{
-    grid-row: 6/7;
-    grid-column: 2 /span 2;
-    align-self: center;
-    justify-self: self-start;
-}
-#eran_mail{
-    grid-row: 7/8;
-    grid-column: 2 /span 2;
-    align-self: center;
-    justify-self: self-start;
+#idatzi_form{
+    grid-row: 2/3;
+    grid-column: 1 /span 1;
+    margin: 1em;
 }
 #kutxa{
-    grid-row: 1/9;
+    grid-row: 1/4;
+    grid-column: 1 /span 1;
+    border: 1px solid black;
+    border-radius: 0.5em;
+    z-index: -1;
+}
+#idatzi_form #hurrengoa_esk1{
+    cursor: pointer;
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+    font-family: Helvetica,"sans-serif";
+    padding: 10px 20px;
+    border-radius: 100px;
+    background: #3b90ac;
+    font-size: 15px;
+    margin-top: 0.5em;
+}
+
+
+/* --------------------Saskia ren 2.orrialdeko aldaketak-------------------- */
+
+
+main #eskaria-2 #titulo2{
+    grid-row: 1/2;
+    grid-column: 3 /span 2;
+    font-size: 2em;
+    padding-left: 0.2em;
+    padding-top: 0.2em;
+    justify-self: self-start;
+    
+}
+main #eskaria-2{
+    display: grid;
+    grid-template: auto auto / 1fr 1fr 1fr 1fr 1fr 1fr;
+    row-gap: 0.5em;
+    margin-left: 3em;
+    margin-top: 1.5em;
+    padding: 1em;
+    border-radius: 0.5em;
+}
+main #eskaria-2 #titulo1{
+    grid-row: 1/2;
+    grid-column: 1 /span 2;
+    font-size: 2em;
+    padding-left: 0.2em;
+    padding-top: 0.2em;
+    justify-self: self-start;
+    
+}
+#eskaria-2 .element{
+    display: flex;
+    flex-direction: row;
+    margin-top: 0.3em;
+}
+#eskaria-2 .element label{
+    width: 10em;
+}
+#idatzi_form2{
+    grid-row: 2/3;
+    grid-column: 3 /span 1;
+    margin: 1em;
+    
+}
+#kutxa2{
+    grid-row: 1/4;
+    grid-column: 3 /span 1;
+    border: 1px solid black;
+    border-radius: 0.5em;
+    z-index: -1;
+}
+#idatzi_form2 #hurrengoa_esk2{
+    cursor: pointer;
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+    font-family: Helvetica,"sans-serif";
+    padding: 10px 20px;
+    border-radius: 100px;
+    background: #3b90ac;
+    font-size: 15px;
+    margin-top: 0.5em;
+}
+
+
+
+/* --------------------Saskia ren 3.orrialdeko aldaketak-------------------- */
+
+
+
+
+main #eskaria_3{
+    display: grid;
+    grid-template: auto auto / 1fr 1fr 1fr 1fr 1fr 1fr;
+    row-gap: 0.5em;
+    margin-left: 3em;
+    margin-top: 1.5em;
+    padding: 1em;
+    border-radius: 0.5em;
+}
+main #eskaria_3 #titulo1{
+    grid-row: 1/2;
+    grid-column: 1 /span 2;
+    font-size: 2em;
+    padding-left: 0.2em;
+    padding-top: 0.2em;
+    justify-self: self-start;
+}
+main #eskaria_3 #idatzi_form2{
+    grid-row: 2/3;
+    grid-column: 1 /span 2;
+    justify-self: center;
+}
+#kutxa3{
+    grid-row: 1/4;
+    grid-column: 1 /span 2;
+    border: 1px solid black;
+    border-radius: 0.5em;
+    z-index: -1;
+}
+#eskaria_3 #hurrengoa_esk3{
+    cursor: pointer;
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+    font-family: Helvetica,"sans-serif";
+    padding: 0.5em 1em;
+    border-radius: 100px;
+    background: #3b90ac;
+    font-size: 1em;
+    
+}
+
+
+
+/* --------------------Saskia ren 4.orrialdeko aldaketak-------------------- */
+
+
+
+
+main #eskaria_4{
+    display: grid;
+    grid-template: auto auto / 1fr 1fr 1fr 1fr 1fr 1fr;
+    row-gap: 0.5em;
+    margin-left: 3em;
+    margin-top: 1.5em;
+    padding: 1em;
+    border-radius: 0.5em;
+}
+main #eskaria_4 #titulo1{
+    grid-row: 1/2;
+    grid-column: 1 /span 3;
+    font-size: 2em;
+    padding-left: 0.2em;
+    padding-top: 0.2em;
+    justify-self: self-start;
+}
+main #eskaria_4 #idatzi_form4{
+    grid-row: 2/3;
+    grid-column: 1 /span 2;
+    justify-self: center;
+}
+#eskaria_4 #hurrengoa_esk4{
+    cursor: pointer;
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+    font-family: Helvetica,"sans-serif";
+    padding: 0.5em 1em;
+    border-radius: 100px;
+    background: #3b90ac;
+    font-size: 0.8em;
+    
+}
+#eskaria_4 .element{
+    display: flex;
+    flex-direction: row;
+    margin-top: 0.3em;
+}
+#idatzi_form4{
+    grid-row: 2/3;
+    grid-column: 1 /span 1;
+    margin: 1em;
+}
+#kutxa4{
+    grid-row: 1/4;
     grid-column: 1 /span 3;
     border: 1px solid black;
     border-radius: 0.5em;
     z-index: -1;
 }
-#hurrengoa_esk1{
-    grid-row: 9/10;
-    grid-column: 4 /span 1;
-    justify-self: center;
+
+
+
+/* --------------------Saskia ren 4.orrialdeko aldaketak-------------------- */
+
+
+
+
+main #eskaria_5{
+    display: grid;
+    grid-template: auto auto / 1fr 1fr 1fr 1fr 1fr 1fr;
+    row-gap: 0.5em;
+    margin-left: 3em;
+    margin-top: 1.5em;
+    padding: 1em;
+    border-radius: 0.5em;
+}
+main #eskaria_5 #titulo1{
+    grid-row: 1/2;
+    grid-column: 1 /span 3;
+    font-size: 2em;
+    padding-left: 0.2em;
+    padding-top: 0.2em;
+    justify-self: self-start;
+}
+main #eskaria_5 #azken_test{
+    grid-row: 2/3;
+    grid-column: 1 /span 3;
+    font-size: 1.2em;
+    padding-left: 0.2em;
+    padding-top: 0.2em;
+    justify-self: self-start;
+    margin-left: 1em;
+}
+#kutxa5{
+    grid-row: 1/4;
+    grid-column: 1 /span 3;
+    border: 1px solid black;
+    border-radius: 0.5em;
+    z-index: -1;
 }
 footer{
     margin: 2em;

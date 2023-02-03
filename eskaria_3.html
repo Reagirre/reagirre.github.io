@@ -3,11 +3,14 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Jony's Cars</title>
 		<link rel="stylesheet" href="estilos.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
 	</head>
 	<body class="grid-layout">
 		<header class="header">
 			<img class="logo" src="img/icono-coche1-inv.png" alt="logoa">
-			<h1>Saskia</h1>
+			<h1>Eskaria</h1>
 		</header>
 		<nav class="nav">
 			<ul>
@@ -17,38 +20,30 @@
 				<a href="kontaktua.html">Kontaktua</a>
 			</ul>
 		</nav>
-		<main class="mainSaskia">
-			<div class="kutxa">
-				<div class="izenburuak">
-					<p>Produktuak:</p>
-					<p>Salneurria:</p>
-					<p>Promozioak:</p>
-					<p>IVA:</p>
-					<p>Guztira:</p>
-				</div>
-	<!----------------------------------------------------------------------->
-				<div class="datuak">
-					<p>Skoda Octavia RS 2021</p>
-					<p>42.100,00 €</p>
-					<p>SKODA Connect</p>
-					<p>%12</p>
-					<p>40.320,00 €</p>
-				</div>
+		<main class="mainEskaria">
+			<div class="eskaria">
+				<form action="/eskaria_4.html">
+					<p><u>Ordainketa mota</u></p>
+					<input type="radio" id="eran_iz" name="aukera" value="eran_ize">
+					<label for="eran_iz">Kreditu-txartela</label><br>
+					<input type="radio" id="eran_abi" name="aukera" value="eran_abi">
+					<label for="eran_abi">Paypal</label><br><br>
+				</form>
 			</div>
 			<div class="botoiak_main">
 				<div class="atzera_bot">
-					<button onclick="window.location.href='kotxea2.html'">
+					<button onclick="window.location.href='eskaria_2.html'">
 						Aurrekoa
 					</button>
 				</div>
 				<div class="aurrera_bot">
-					<button onclick="window.location.href='eskaria.html'">
+					<button onclick="window.location.href='eskaria_4.html'">
 						Hurrengoa
 					</button>
 				</div>
 			</div>
 		</main>
-		<footer class="footer">
+		<footer>
 			<p>&copy; 2022 Lea Artibai Ikastetxea</p>
 		</footer>
 	</body>
